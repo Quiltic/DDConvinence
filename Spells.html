@@ -1,0 +1,60 @@
+<!-- https://quiltic.github.io/Quiltic.github.io-DDConvinence/Spells -->
+<html>
+<head>
+<script>
+var lastcall = ["01","01"]
+var turn = Math.floor(Math.random() * 2);
+var numdice = [4,4];
+//Strength [16,3], Dexterity [16,3], Constitution [8,-1], Intelligence [8,-1], Wisdom [14,2], Charisma [11,0]
+let players = {K:{Str:1, Dex:4, Con:1, Intel:0, Wis:-1, Cha:5, Wep: {Name:"Sword", Dmg: 6, BonusDmg:1}, Extra:{Class: "Bard",Stuff:"Bardic insparation 1d6 someone else"}}, 
+		A:{Str:5, Dex:1, Con:5, Intel:-1, Wis:-2, Cha:1, Wep: {Name:"Sword", Dmg: 6, BonusDmg: 5}, Extra:{Class: "Barbarian",Stuff:"Advantage on All Strength"}},
+		H:{Str:-2, Dex:-2, Con:2, Intel:4, Wis:3, Cha:2, Wep: {Name:"Dagger", Dmg: 4, BonusDmg: 0}, Extra:{Class: "Cleric",Stuff:""}},
+		D:{Str:1, Dex:5, Con:0, Intel:2, Wis:2, Cha:3, Wep: {Name:"Sword", Dmg: 6, BonusDmg: 1}, Extra:{Class: "Sorcerer",Stuff:"Whenever rol1 1 random spell"}},
+		Z:{Str:3, Dex:3, Con:-1, Intel:-1, Wis:2, Cha:0, Wep: {Name:"Sword", Dmg: 6, BonusDmg: 3}, Extra:{Class: "Rogue",Stuff:"Whenever alie is mayley attacking same target do 1ds extra dmg"}}
+}; 
+var picked = "";
+var player = '';
+
+function caricter(p){
+	picked = p
+	document.getElementById("info").innerHTML = (picked);
+	document.getElementById("ONE!").innerHTML = 'Strength <button type="button" onclick="roll((player.Str))", id = "Str">Roll 20!</button>';
+	document.getElementById("TWO!").innerHTML = 'Dexterity <button type="button" onclick="roll((player.Dex))", id = "Dex">Roll 20!</button>';
+	document.getElementById("THREE!").innerHTML = 'Constitution <button type="button" onclick="roll((player.Con))", id = "Con">Roll 20!</button>';
+	document.getElementById("FOUR!").innerHTML = 'Intelligence <button type="button" onclick="roll((player.Intel))", id = "Intel">Roll 20!</button>';
+	document.getElementById("FIVE!").innerHTML = 'Wisdom <button type="button" onclick="roll((player.Wis))", id = "Wis">Roll 20!</button>';
+	document.getElementById("SIX!").innerHTML = 'Charisma <button type="button" onclick="roll((player.Cha))", id = "Cha">Roll 20!</button>';
+	document.getElementById("WEP!").innerHTML = 'Wep <button type="button" onclick="roleDmg(player.Wep.Dmg)", id = "Wep">Roll Damage!</button>';
+	
+	document.getElementById("TWONTY!").innerHTML = '<button type="button" onclick="rolled(20)", id = "TWONTY">Roll 20!</button> <button type="button" onclick="rolled(10)", id = "TentY">Roll 10!</button> <button type="button" onclick="rolled(8)", id = "ead">Roll 8!</button> <button type="button" onclick="rolled(6)", id = "sx">Roll 6!</button> <button type="button" onclick="rolled(4)", id = "fr">Roll 4!</button>';	
+	document.getElementById("Change").innerHTML = '<button type="button" onclick="Back()", id = "bback">Back</button>';
+}
+function roleDmg(dmg) {
+	
+	var dmgnum = Math.floor(Math.random() * dmg)+1;
+	var endnum = dmgnum + player.Wep.BonusDmg 
+	document.getElementById("demo").innerHTML = ("Damage: "+dmgnum+ " + "+ player.Wep.BonusDmg+ ' = '+ endnum);
+}
+function roll(typeint) {
+	var rolenum = Math.floor(Math.random() * 20)+1;
+	var endnum = rolenum + typeint 
+	document.getElementById("demo").innerHTML = ("Roled: "+rolenum+ " + "+ typeint+ ' = '+ endnum);
+}
+function rolled(typeint) {
+	var rolenum = Math.floor(Math.random() * typeint)+1;
+	document.getElementById("demo").innerHTML = ("Roled: "+rolenum);
+}
+</script>
+</head>
+
+<body>
+<h2>Caricter Stuff</h2>
+<div id= 'Main'>
+
+<p id = "Change">
+  <a href="https://quiltic.github.io/Quiltic.github.io-DDConvinence/">Back</a>
+  </p>
+
+</div>
+</body>
+</html> 
