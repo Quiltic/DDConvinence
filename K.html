@@ -8,28 +8,9 @@ var numdice = [4,4];
 //Strength [16,3], Dexterity [16,3], Constitution [8,-1], Intelligence [8,-1], Wisdom [14,2], Charisma [11,0]
 let players = {K:{Str:1, Dex:4, Con:1, Intel:0, Wis:-1, Cha:5, Wep: {Name:"Sword", Dmg: 6, BonusDmg:1}, Extra:{Class: "Bard",Stuff:"Bardic insparation 1d6 someone else"}}}; 
 
-var picked = "";
-var player = '';
-function CairA(){
-	player = players.A
-	caricter("A")
-}
-function CairK(){
-	player = players.K
-	caricter("K")
-}
-function CairD(){
-	player = players.D
-	caricter("D")
-}
-function CairZ(){
-	player = players.Z
-	caricter("Z")
-}
-function CairH(){
-	player = players.H
-	caricter("H")
-}
+var picked = "K";
+var player = players.K;
+
 function caricter(p){
 	picked = p
 	document.getElementById("info").innerHTML = (picked);
@@ -46,16 +27,16 @@ function caricter(p){
 }
 function Back(){
 	document.getElementById("Main").innerHTML = '<p id = "info"> </p>' + 
-		'<p id="demo">WHO ARE YOU?!</p>' + 
-		'<p id = "ONE!"><button type="button" onclick="CairA()", id = "Con">A</button> </p>' + 
-		'<p id = "TWO!"><button type="button" onclick="CairK()", id = "Str">K</button> </p>' + 
-		'<p id = "THREE!"><button type="button" onclick="CairD()", id = "Str">D</button></p>' +
-		'<p id = "FOUR!"><button type="button" onclick="CairZ()", id = "Str">Z</button></p>' +
-		'<p id = "FIVE!"><button type="button" onclick="CairH()", id = "Str">H</button></p>' +
-		'<p id = "SIX!"></p>' +
-		'<p id = "WEP!"></p>' +
-		'<P id = "TWONTY!"></p>' +
-		'<p id = "Change"></p>';
+		'<p id="demo">K</p>' + 
+		'<p id = "ONE!">Strength <button type="button" onclick="roll((player.Str))", id = "Str">Roll 20!</button> </p>' + 
+		'<p id = "TWO!">Dexterity <button type="button" onclick="roll((player.Dex))", id = "Dex">Roll 20!</button> </p>' + 
+		'<p id = "THREE!">Constitution <button type="button" onclick="roll((player.Con))", id = "Con">Roll 20!</button></p>' +
+		'<p id = "FOUR!">Intelligence <button type="button" onclick="roll((player.Intel))", id = "Intel">Roll 20!</button></p>' +
+		'<p id = "FIVE!">Wisdom <button type="button" onclick="roll((player.Wis))", id = "Wis">Roll 20!</button></p>' +
+		'<p id = "SIX!">Charisma <button type="button" onclick="roll((player.Cha))", id = "Cha">Roll 20!</button></p>' +
+		'<p id = "WEP!">Wep <button type="button" onclick="roleDmg(player.Wep.Dmg)", id = "Wep">Roll Damage!</button></p>' +
+		'<P id = "TWONTY!"><button type="button" onclick="rolled(20)", id = "TWONTY">Roll 20!</button> <button type="button" onclick="rolled(10)", id = "TentY">Roll 10!</button> <button type="button" onclick="rolled(8)", id = "ead">Roll 8!</button> <button type="button" onclick="rolled(6)", id = "sx">Roll 6!</button> <button type="button" onclick="rolled(4)", id = "fr">Roll 4!</button></p>' +
+		'<p id = "Change"><a href="https://quiltic.github.io/Quiltic.github.io-DDConvinence">Back</a></p>';
 }
 function roleDmg(dmg) {
 	
@@ -95,34 +76,18 @@ function rolled(typeint) {
 <div id= 'Main'>
 
 <p id = "info"> </p>
-<p id="demo">WHO ARE YOU?!</p>
+<p id="demo">K</p>
+	
+<p id = "ONE!">Strength <button type="button" onclick="roll((player.Str))", id = "Str">Roll 20!</button> </p>
+<p id = "TWO!">Dexterity <button type="button" onclick="roll((player.Dex))", id = "Dex">Roll 20!</button> </p>
+<p id = "THREE!">Constitution <button type="button" onclick="roll((player.Con))", id = "Con">Roll 20!</button></p>
+<p id = "FOUR!">Intelligence <button type="button" onclick="roll((player.Intel))", id = "Intel">Roll 20!</button></p>
+<p id = "FIVE!">Wisdom <button type="button" onclick="roll((player.Wis))", id = "Wis">Roll 20!</button></p>
+<p id = "SIX!">Charisma <button type="button" onclick="roll((player.Cha))", id = "Cha">Roll 20!</button></p>
+<p id = "WEP!">Wep <button type="button" onclick="roleDmg(player.Wep.Dmg)", id = "Wep">Roll Damage!</button></p>
 
-
-<p id = 'ONE!'> 
-<button type="button" onclick="CairA()", id = "Con">A</button>
-</p>
-
-<p id = 'TWO!'>
-<button type="button" onclick="CairK()", id = "Str">K</button>
-</p>
-
-<p id = 'THREE!'>
-<button type="button" onclick="CairD()", id = "Str">D</button>
-</p>
-
-<p id = 'FOUR!'>
-<button type="button" onclick="CairZ()", id = "Str">Z</button>
-</p>
-
-<p id = 'FIVE!'>
-<button type="button" onclick="CairH()", id = "Str">H</button>
-</p>
-
-<p id = 'SIX!'></p>
-<p id = 'WEP!'></p>
-<p id = 'TWONTY!'></p>
-
-<p id = "Change"></p>
+<p id = "TWONTY!"><button type="button" onclick="rolled(20)", id = "TWONTY">Roll 20!</button> <button type="button" onclick="rolled(10)", id = "TentY">Roll 10!</button> <button type="button" onclick="rolled(8)", id = "ead">Roll 8!</button> <button type="button" onclick="rolled(6)", id = "sx">Roll 6!</button> <button type="button" onclick="rolled(4)", id = "fr">Roll 4!</button></p>
+<p id = "Change"><a href="https://quiltic.github.io/Quiltic.github.io-DDConvinence">Back</a></p>
 
 </div>
 </body>
