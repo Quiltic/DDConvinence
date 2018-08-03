@@ -7,7 +7,7 @@ var turn = Math.floor(Math.random() * 2);
 var numdice = [4,4];
 //Strength [16,3], Dexterity [16,3], Constitution [8,-1], Intelligence [8,-1], Wisdom [14,2], Charisma [11,0]
 let players = {K:{Str:1, Dex:4, Con:1, Intel:0, Wis:-1, Cha:5, Wep: {Name:"Sword", Dmg: 6, BonusDmg:1}, Extra:{Class: "Bard",Stuff:"Bardic insparation 1d6 someone else"}}}; 
-let spells = [{Name: "Firebolt",Chatter:"A ranged spell attack. On hit, the target takes 1d10 fire damage. A flammable object hit by this spell ignites if it isn't being worn or carried.",Roll:rolled(20),Dmg:[rolled(10)]}]
+let spells = [{Name: "Firebolt",Chatter:"A ranged spell attack. On hit, the target takes 1d10 fire damage. A flammable object hit by this spell ignites if it isn't being worn or carried.",Roll:20,Dmg:10}]
 var picked = "K";
 var player = players.K;
 
@@ -31,8 +31,8 @@ function change(){
 function show(p){
 	document.getElementById("info").innerHTML = p[Name];
 	document.getElementById("ONE!").innerHTML = p[Chatter];
-	document.getElementById("TWO!").innerHTML = '<button type="button" onclick="p[Roll]", id = "Con">Roll for attack!</button>';
-	document.getElementById("THREE!").innerHTML = '<button type="button" onclick="p[Dmg][0]", id = "Con">Roll Damage!</button>';
+	document.getElementById("TWO!").innerHTML = '<button type="button" onclick="rolled(p[Roll])", id = "Con">Roll for attack!</button>';
+	document.getElementById("THREE!").innerHTML = '<button type="button" onclick="rolled(p[Dmg])", id = "Con">Roll Damage!</button>';
 	//document.getElementById("THREE!").innerHTML = 'Constitution <button type="button" onclick="roll((player.Con))", id = "Con">Roll 20!</button>';
 	//document.getElementById("FOUR!").innerHTML = 'Intelligence <button type="button" onclick="roll((player.Intel))", id = "Intel">Roll 20!</button>';
 	//document.getElementById("FIVE!").innerHTML = 'Wisdom <button type="button" onclick="roll((player.Wis))", id = "Wis">Roll 20!</button>';
