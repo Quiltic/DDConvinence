@@ -7,24 +7,41 @@ var turn = Math.floor(Math.random() * 2);
 var numdice = [4,4];
 //Strength [16,3], Dexterity [16,3], Constitution [8,-1], Intelligence [8,-1], Wisdom [14,2], Charisma [11,0]
 let players = {K:{Str:1, Dex:4, Con:1, Intel:0, Wis:-1, Cha:5, Wep: {Name:"Sword", Dmg: 6, BonusDmg:1}, Extra:{Class: "Bard",Stuff:"Bardic insparation 1d6 someone else"}}}; 
-
+let spells = [{Name: "Firebolt",Chatter:"A ranged spell attack. On hit, the target takes 1d10 fire damage. A flammable object hit by this spell ignites if it isn't being worn or carried.",Roll:rolled(20),Dmg:[rolled(10)]}]
 var picked = "K";
 var player = players.K;
 
-function caricter(p){
-	picked = p
-	document.getElementById("info").innerHTML = (picked);
-	document.getElementById("ONE!").innerHTML = 'Strength <button type="button" onclick="roll((player.Str))", id = "Str">Roll 20!</button>';
-	document.getElementById("TWO!").innerHTML = 'Dexterity <button type="button" onclick="roll((player.Dex))", id = "Dex">Roll 20!</button>';
-	document.getElementById("THREE!").innerHTML = 'Constitution <button type="button" onclick="roll((player.Con))", id = "Con">Roll 20!</button>';
-	document.getElementById("FOUR!").innerHTML = 'Intelligence <button type="button" onclick="roll((player.Intel))", id = "Intel">Roll 20!</button>';
-	document.getElementById("FIVE!").innerHTML = 'Wisdom <button type="button" onclick="roll((player.Wis))", id = "Wis">Roll 20!</button>';
-	document.getElementById("SIX!").innerHTML = 'Charisma <button type="button" onclick="roll((player.Cha))", id = "Cha">Roll 20!</button>';
-	document.getElementById("WEP!").innerHTML = 'Wep <button type="button" onclick="roleDmg(player.Wep.Dmg)", id = "Wep">Roll Damage!</button>';
+function change(){
+	document.getElementById("info").innerHTML = 'Spells';
+	document.getElementById("ONE!").innerHTML = <button type="button" onclick="show(spells[0])", id = "Str">spells[0][Name]</button> 
+	for (a = 1; a < spells; a++){
+		document.getElementById("ONE!").innerHTML = document.getElementById("ONE!").innerHTML + ' <button type="button" onclick="show(spells[a])", id = "Str">Roll 20!</button>';
+	}
+		
+	//document.getElementById("TWO!").innerHTML = 'Dexterity <button type="button" onclick="roll((player.Dex))", id = "Dex">Roll 20!</button>';
+	//document.getElementById("THREE!").innerHTML = 'Constitution <button type="button" onclick="roll((player.Con))", id = "Con">Roll 20!</button>';
+	//document.getElementById("FOUR!").innerHTML = 'Intelligence <button type="button" onclick="roll((player.Intel))", id = "Intel">Roll 20!</button>';
+	//document.getElementById("FIVE!").innerHTML = 'Wisdom <button type="button" onclick="roll((player.Wis))", id = "Wis">Roll 20!</button>';
+	//document.getElementById("SIX!").innerHTML = 'Charisma <button type="button" onclick="roll((player.Cha))", id = "Cha">Roll 20!</button>';
+	//document.getElementById("WEP!").innerHTML = 'Wep <button type="button" onclick="roleDmg(player.Wep.Dmg)", id = "Wep">Roll Damage!</button>';
 	
 	document.getElementById("TWONTY!").innerHTML = '<button type="button" onclick="rolled(20)", id = "TWONTY">Roll 20!</button> <button type="button" onclick="rolled(10)", id = "TentY">Roll 10!</button> <button type="button" onclick="rolled(8)", id = "ead">Roll 8!</button> <button type="button" onclick="rolled(6)", id = "sx">Roll 6!</button> <button type="button" onclick="rolled(4)", id = "fr">Roll 4!</button>';	
 	document.getElementById("Change").innerHTML = '<button type="button" onclick="Back()", id = "bback">Back</button>';
 }
+function show(p){
+	document.getElementById("info").innerHTML = p[Name];
+	document.getElementById("ONE!").innerHTML = p[Chatter];
+	document.getElementById("TWO!").innerHTML = '<button type="button" onclick="p[Roll]", id = "Con">Roll for attack!</button>';
+	document.getElementById("THREE!").innerHTML = '<button type="button" onclick="p[Dmg]", id = "Con">Roll Damage!</button>';
+	//document.getElementById("THREE!").innerHTML = 'Constitution <button type="button" onclick="roll((player.Con))", id = "Con">Roll 20!</button>';
+	//document.getElementById("FOUR!").innerHTML = 'Intelligence <button type="button" onclick="roll((player.Intel))", id = "Intel">Roll 20!</button>';
+	//document.getElementById("FIVE!").innerHTML = 'Wisdom <button type="button" onclick="roll((player.Wis))", id = "Wis">Roll 20!</button>';
+	//document.getElementById("SIX!").innerHTML = 'Charisma <button type="button" onclick="roll((player.Cha))", id = "Cha">Roll 20!</button>';
+	//document.getElementById("WEP!").innerHTML = 'Wep <button type="button" onclick="roleDmg(player.Wep.Dmg)", id = "Wep">Roll Damage!</button>';
+	
+	//document.getElementById("TWONTY!").innerHTML = '<button type="button" onclick="rolled(20)", id = "TWONTY">Roll 20!</button> <button type="button" onclick="rolled(10)", id = "TentY">Roll 10!</button> <button type="button" onclick="rolled(8)", id = "ead">Roll 8!</button> <button type="button" onclick="rolled(6)", id = "sx">Roll 6!</button> <button type="button" onclick="rolled(4)", id = "fr">Roll 4!</button>';	
+	document.getElementById("Change").innerHTML = '<button type="button" onclick="Back()", id = "bback">Back</button>';
+}	
 function Back(){
 	document.getElementById("Main").innerHTML = '<p id = "info"> </p>' + 
 		'<p id="demo">K</p>' + 
@@ -72,7 +89,7 @@ function rolled(typeint) {
 </head>
 
 <body>
-<h2>Caricter Stuff</h2>
+<h2>K</h2>
 <div id= 'Main'>
 
 <p id = "info"> </p>
@@ -87,7 +104,7 @@ function rolled(typeint) {
 <p id = "WEP!">Wep <button type="button" onclick="roleDmg(player.Wep.Dmg)", id = "Wep">Roll Damage!</button></p>
 
 <p id = "TWONTY!"><button type="button" onclick="rolled(20)", id = "TWONTY">Roll 20!</button> <button type="button" onclick="rolled(10)", id = "TentY">Roll 10!</button> <button type="button" onclick="rolled(8)", id = "ead">Roll 8!</button> <button type="button" onclick="rolled(6)", id = "sx">Roll 6!</button> <button type="button" onclick="rolled(4)", id = "fr">Roll 4!</button></p>
-<p id = "Change"><a href="https://quiltic.github.io/Quiltic.github.io-DDConvinence">Back</a></p>
+<p id = "Change"><button type="button" onclick="change()", id = "Spells">Roll Damage!</button><a href="https://quiltic.github.io/Quiltic.github.io-DDConvinence">Back</a></p>
 
 </div>
 </body>
