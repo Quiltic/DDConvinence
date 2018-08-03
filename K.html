@@ -14,9 +14,9 @@ var player = players.K;
 function change(){
 	document.getElementById("info").innerHTML = 'Spells';
 	document.getElementById("ONE!").innerHTML = <button type="button" onclick="show(spells[0])", id = "Str">spells[0][Name]</button> 
-	for (a = 1; a < spells; a++){
-		document.getElementById("ONE!").innerHTML = document.getElementById("ONE!").innerHTML + ' <button type="button" onclick="show(spells[a])", id = "Str">Roll 20!</button>';
-	}
+	//for (a = 1; a < spells; a++){
+	//	document.getElementById("ONE!").innerHTML = document.getElementById("ONE!").innerHTML + ' <button type="button" onclick="show(spells[a])", id = "Str">Roll 20!</button>';
+	//}
 		
 	//document.getElementById("TWO!").innerHTML = 'Dexterity <button type="button" onclick="roll((player.Dex))", id = "Dex">Roll 20!</button>';
 	//document.getElementById("THREE!").innerHTML = 'Constitution <button type="button" onclick="roll((player.Con))", id = "Con">Roll 20!</button>';
@@ -53,7 +53,7 @@ function Back(){
 		'<p id = "SIX!">Charisma <button type="button" onclick="roll((player.Cha))", id = "Cha">Roll 20!</button></p>' +
 		'<p id = "WEP!">Wep <button type="button" onclick="roleDmg(player.Wep.Dmg)", id = "Wep">Roll Damage!</button></p>' +
 		'<P id = "TWONTY!"><button type="button" onclick="rolled(20)", id = "TWONTY">Roll 20!</button> <button type="button" onclick="rolled(10)", id = "TentY">Roll 10!</button> <button type="button" onclick="rolled(8)", id = "ead">Roll 8!</button> <button type="button" onclick="rolled(6)", id = "sx">Roll 6!</button> <button type="button" onclick="rolled(4)", id = "fr">Roll 4!</button></p>' +
-		'<p id = "Change"><a href="https://quiltic.github.io/Quiltic.github.io-DDConvinence">Back</a></p>';
+		'<p id = "Change"><button type="button" onclick="change()", id = "Spells">Spells</button> <a href="https://quiltic.github.io/Quiltic.github.io-DDConvinence">Back</a></p>';
 }
 function roleDmg(dmg) {
 	
@@ -104,7 +104,7 @@ function rolled(typeint) {
 <p id = "WEP!">Wep <button type="button" onclick="roleDmg(player.Wep.Dmg)", id = "Wep">Roll Damage!</button></p>
 
 <p id = "TWONTY!"><button type="button" onclick="rolled(20)", id = "TWONTY">Roll 20!</button> <button type="button" onclick="rolled(10)", id = "TentY">Roll 10!</button> <button type="button" onclick="rolled(8)", id = "ead">Roll 8!</button> <button type="button" onclick="rolled(6)", id = "sx">Roll 6!</button> <button type="button" onclick="rolled(4)", id = "fr">Roll 4!</button></p>
-<p id = "Change"><button type="button" onclick="change()", id = "Spells">Roll Damage!</button><a href="https://quiltic.github.io/Quiltic.github.io-DDConvinence">Back</a></p>
+<p id = "Change"><button type="button" onclick="change()", id = "Spells">Spells</button> <a href="https://quiltic.github.io/Quiltic.github.io-DDConvinence">Back</a></p>
 
 </div>
 </body>
