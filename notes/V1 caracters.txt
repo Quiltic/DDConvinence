@@ -1,28 +1,28 @@
 Adam: Class: "Barbarian" : Strength [20,5], Dexterity [13,1], Constitution [20,5], Intelligence [9,-1], Wisdom [6,-2], Charisma [9,-1], HP [17, 13], Spells[1:2(0)], Known [Healing touch, Firebolt]
 Inv: Sword, OldHorceBox, 5 silver, pouch of gunpowder, Iron Rod
 
-Kenil: Class: "Bard" : Strength [12,1], Dexterity [18,4], Constitution [13,1], Intelligence [11,0], Wisdom [9,-1], Charisma [20,5], HP [11, 11], Spells[1:4(0)], Known [Healing touch, Firebolt, Minor Ilusion(0)]
+Kenil: Class: "Bard" : Strength [12,1], Dexterity [18,4], Constitution [13,1], Intelligence [11,0], Wisdom [9,-1], Charisma [20,5], HP [11, 11], Spells[1:4(2)], Known [Healing touch, Firebolt, Minor Ilusion(0),Sleep(1,dis)]
 Inv: Sword, Locket(silver with emerald inside), Gold, Rusted dagger, SeaBlue Power Orb
 Powers: Bardic insparation, Song of rest
 
-Harshel: Class: "Cleric" : Strength [6,-2], Dexterity [7,-2], Constitution [14,2], Intelligence [18,4], Wisdom [16,3], Charisma [15,2] HP [12, 3], Spells[1:4(3), 2:1(0): ], Known [Healing touch(1), Firebolt,Spare the dying, Detect Magic(1), Prare of healing]
+Harshel: Class: "Cleric" : Strength [6,-2], Dexterity [7,-2], Constitution [14,2], Intelligence [18,4], Wisdom [16,3], Charisma [15,2] HP [12, 3], Spells[1:4(3), 2:1(0): ], Known [Healing touch(1), Firebolt,Spare the dying, Detect Magic(1), Prare of healing(2),Sleep(1,dis)]
 God: Josh&Chance Inv: 3 Daggers, 15 Silver, PickleBox, Lockbox(locked)
 
 Dave: Class: "Sourccer" : Strength[13,1], Dexterity[20,5], Constitution[10,0],  Intelligence[15,2],  Wisdom[15,2], Charisma[16,3], HP [10, 5], 
-Spells[1:6(6), 2:1(0)]: 0, Known [Healing touch(1), Firebolt(0), Magic Missle(1), Mage hand(0), Shater(2)]
-Inv: Sharp rock, Sword, 2 Silver rings, 2 Gold coin, 5 Silver, Sled, Key(unkown), Yellow Potion, Shit Yoyo, Tome, Pencle, Dark robes, Half a dead snake, batpack
+Spells[1:6(6), 2:1(0)]: 0, Known [Healing touch(1), Firebolt(0), Magic Missle(1), Mage hand(0), Shater(2), Sleep(1,dis)]
+Inv: Sharp rock, Sword, 2 Gold coin, 3 Silver, Sled, Key(unkown), Yellow Potion, Shit Yoyo, Tome, Pencle, Dark robes, Half a dead snake, batpack
 
 
 Zach: Class: "Rogue" : Strength [16,3], Dexterity [16,3], Constitution [8,-1], Intelligence [8,-1], Wisdom [14,2], Charisma [11,0], HP [9, 9], Spells[1:3(0)], Known [Healing touch, Firebolt] 
 Inv: 3 gold, 14 silver, 59 copper. Sword, Magic block(useless), 2 1pt Healing potions, Sleeping gass, hair growth potion, hair removal removal potion, Yellow potion, "Herbal potion", Stachle, Steel dagger, Food, Bag, Vile of cursed mist, Wires, Rod of Holding, Silver ring, 
 
 
-Ravi: Class: "Druid" : Strength [14,2], Dexterity [20,5], Constitution [4,-3], Intelligence [20,5], Wisdom [15,2], Charisma [17,3], HP [5, 5], Spells[1:3()], Known [Healing touch, Firebolt, Druidcraft,Speak with Animals``]
-Inv: Sword, Bent coin, 3 Vileleaf petals, gold coin
+Ravi: Class: "Druid" : Strength [14,2], Dexterity [20,5], Constitution [4,-3], Intelligence [20,5], Wisdom [15,2], Charisma [17,3], HP [5, 5], Spells[1:3(2)], Known [Healing touch(1), Firebolt, Druidcraft,Speak with Animals(1),Sleep(1,dis)]`
+Inv: Sword, Bent coin, 3 Vileleaf petals, gold coin, Good mix of herbs (Large plants), Achemical kit
 Powers: Wild shape
 Owns a Herbalist shop
 
-Shared:
+Shared: 
 	Human children into pickles (Grey box)
 	I wish for a button  that turns old (40+ year old) ladies into horses. (Grey box)
 	Arrow points in a random direction (Changes)
@@ -30,7 +30,7 @@ Shared:
 	~THE RING~
  Bag 2 days food (2)
  4 Paddles
- 30 rope - 20 ft for horce -
+ 125 rope - 40 ft for horce -
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Notes:
@@ -97,4 +97,10 @@ Blacksmith 'Lost' key replaced his lock.
 At front of chairmans house.
 
 --
+Turned last woman into a horce.
+
+K:23, R:23, D:19, Gard2: 17, A:16, H:15, Gard3:10, Z:5, Gard1: 4
+G1:7/12
+G2:4/9
+G3 1/10
 
