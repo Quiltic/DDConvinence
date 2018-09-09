@@ -15,7 +15,7 @@ Inv: Sharp rock, Sword, 2 Gold coin, 3 Silver, Sled, Key(unkown), Yellow Potion,
 
 Zach: Class: "Rogue" : Strength [16,3], Dexterity [16,3], Constitution [8,-1], Intelligence [8,-1], Wisdom [14,2], Charisma [11,0], HP [9, 9], Spells[1:3(0)], Known [Healing touch, Firebolt] 
 Inv: 3 gold, 14 silver, 59 copper. Sword, Magic block(useless), 2 1pt Healing potions, Sleeping gass, hair growth potion, hair removal removal potion, Yellow potion, "Herbal potion", Stachle, Steel dagger, Food, Bag, Vile of cursed mist, Wires, Rod of Holding, Silver ring, 
-
+leather armor , 2 Daggers
 
 Ravi: Class: "Druid" : Strength [14,2], Dexterity [20,5], Constitution [4,-3], Intelligence [20,5], Wisdom [15,2], Charisma [17,3], HP [5, 5], Spells[1:3(2)], Known [Healing touch(1), Firebolt, Druidcraft,Speak with Animals(1),Sleep(1,dis)]`
 Inv: Sword, Bent coin, 3 Vileleaf petals, gold coin, Good mix of herbs (Large plants), Achemical kit
@@ -53,6 +53,7 @@ At cemitary. Killed 10 zoms
 Plauge hits Rumpshire after they visit.
 
 ALL OF ZACHS ROLES ARE INVERTED 2 = 18
+ALL OF ZACHS ROLES AREN NORMAL 2 = 2
 Current used Ring : Dave
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -97,10 +98,10 @@ Blacksmith 'Lost' key replaced his lock.
 At front of chairmans house.
 
 --
+Dave wished for 'A pancake and toco resipy' then 'ate' it
 Turned last woman into a horce.
+Ruvi made a control potion,
+Planed to sleep in the chairmans house, but got raided!.
+Zach killed a guy by slide sliceing the legs off a gard. 
 
-K:23, R:23, D:19, Gard2: 17, A:16, H:15, Gard3:10, Z:5, Gard1: 4
-G1:7/12
-G2:4/9
-G3 1/10
 
